@@ -29,7 +29,7 @@ btnx.addEventListener("click", function() {
 })
 
 
-///area de teste
+// Produtos
 const items = [
     {
         id: 0,
@@ -104,10 +104,6 @@ const items = [
         valoruni: 20
     },
 ]
-
-//const precosEmReais = items.map(p => p.valoruni * 4)
-
-//console.log(precosEmReais);
 
 
 inicializarLoja = () => {
@@ -191,14 +187,7 @@ function CalcularCusto(){
     
     
    
-    //dados de input
-    
-   // let quantidade = document.querySelector("#quantidade").value;
-    //calcular
-    //let custoPagar = preco * quantidade;
-    //mostrar resultado
-    //let minhaDiv = document.querySelector(".mostra");
-    //minhaDiv.innerText= "Total a pagar = " + custoPagar ;
+   
 }
 var carinhovalortotal = document.querySelector(".valortotal p");
 
