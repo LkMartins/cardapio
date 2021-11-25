@@ -28,8 +28,6 @@ btnx.addEventListener("click", function() {
     }
 })
 
-
-// Produtos
 const items = [
     {
         id: 0,
@@ -105,7 +103,6 @@ const items = [
     },
 ]
 
-
 inicializarLoja = () => {
     var containerProdutos = document.getElementById('produtos');
     items.map((val)=>{
@@ -129,19 +126,16 @@ inicializarLoja = () => {
 inicializarLoja();
 
 atualizarCarrinho = () => {
-    const itemsCarrinho = [
-        {
+   
+    const itemsCarrinho = items.filter(val => val.quantidade > 0)
 
-        },
-    ]
+    const somaReduce = itemsCarrinho.reduce(function(valorAcumulador, valorArray) {
+        return valorAcumulador + valorArray.valoruni;
+    }, 0)
+   
 
-    items.map((val)=>{
-        if(val.quantidade > 0){
-            itemsCarrinho.map = items;
-        }
-    })
-    
-    console.log(itemsCarrinho);
+    console.log(somaReduce)
+
 
    fecharpedido.style.display = "block";
    var containerCarrinho = document.querySelector('.box');
@@ -180,15 +174,6 @@ for(var i = 0; i < links.length; i++){
     })
 }
 
-
-
-function CalcularCusto(){
-    
-    
-    
-   
-   
-}
 var carinhovalortotal = document.querySelector(".valortotal p");
 
     console.log(fecharpedido);
