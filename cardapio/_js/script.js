@@ -128,13 +128,15 @@ inicializarLoja();
 atualizarCarrinho = () => {
    
     const itemsCarrinho = items.filter(val => val.quantidade > 0)
-
-    const somaReduce = itemsCarrinho.reduce(function(valorAcumulador, valorArray) {
-        return valorAcumulador + valorArray.valoruni;
+    let soma = 0
+    itemsCarrinho.forEach(function(item) {
+        soma += (item.valoruni * item.quantidade) 
     }, 0)
-   
+    console.log(soma);
 
-    console.log(somaReduce)
+
+    var carinhovalortotal = document.querySelector(".valortotal p");
+    carinhovalortotal.innerText= "Total a Pagar= " + soma ;
 
 
    fecharpedido.style.display = "block";
